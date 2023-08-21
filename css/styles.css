@@ -959,13 +959,13 @@ header>.container {
 }
 
 /* Check input state */
-.modal-form-input:not(:placeholder-shown):invalid:required {
+/* .modal-form-input:not(:placeholder-shown):invalid:required {
     border-color: var(--error);
 }
 
 .modal-form-input:not(:placeholder-shown):valid:required {
     border-color: var(--success);
-}
+} */
 
 .modal-form-icon {
     position: absolute;
@@ -976,14 +976,14 @@ header>.container {
     pointer-events: none;
     transition: fill var(--transition);
 }
-
+/* 
 .modal-form-input:not(:placeholder-shown):invalid:required+.modal-form-icon {
     fill: var(--error);
 }
 
 .modal-form-input:not(:placeholder-shown):valid:required+.modal-form-icon {
     fill: var(--success);
-}
+} */
 
 .modal-form-info {
     position: absolute;
@@ -992,7 +992,7 @@ header>.container {
     transform: translateX(-16px) translateY(-50%);
 }
 
-.error,
+/* .error,
 .success {
     transform-origin: center;
     transform: scale(0.2);
@@ -1008,7 +1008,7 @@ header>.container {
 .modal-form-input:not(:placeholder-shown):valid:required~.modal-form-info .success {
     opacity: 1;
     transform: scale(1);
-}
+} */
 
 .form-agrement-container {
     margin-bottom: 24px;
