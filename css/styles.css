@@ -668,17 +668,17 @@ margin-bottom: 72px;
 
 /* Footer social media */
 
-.fotter-social-container {
+.footer-social-container {
     display: block;
     margin-right: 80px;
 }
 
-.fotter-social-desc, .fotter-subscribe-desc {
+.footer-social-desc, .footer-subscribe-desc {
     color: var(--white);
     font-size: 16px;
     font-weight: 500;
     line-height: 1.5;
-    letter-spacing: 0.04em;
+    letter-spacing: 0.02em;
     margin-bottom: 16px;
 }
 
@@ -714,13 +714,11 @@ margin-bottom: 72px;
     display: block;
 }
 
-.fotter-subscribe-desc {
-
-}
-
 .footer-form {
     display: flex;
+    gap: 24px;
 }
+.footer-form-label {}
 
 .footer-form-input {
     width: 264px;
@@ -730,10 +728,11 @@ margin-bottom: 72px;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
     background-color: transparent;
     outline: transparent;
-    padding: 8px 16px;
+    /* padding: 8px 16px; */
+    padding-left: 16px;
     color: var(--white);
     font-size: 12px;
-    line-height: 2;
+    line-height: 1.5;
     letter-spacing: 0.04em;
     transition: var(--transition);
 }
@@ -743,7 +742,7 @@ margin-bottom: 72px;
 }
 
 .footer-form-input::placeholder {
-    color: var(--light-slate);
+    color: var(--white);
     font-size: 12px;
     line-height: 2;
     letter-spacing: 0.04em;
@@ -761,7 +760,7 @@ margin-bottom: 72px;
     font-weight: 500;
     line-height: 1.5;
     letter-spacing: 0.04em;
-    margin-left: 24px;
+    /* margin-left: 24px; */
     min-width: 165px;
     min-height: 40px;
     transition: background-color var(--transition);
@@ -860,9 +859,10 @@ margin-bottom: 72px;
 }
 
 /* Modal form */
-
-.modal-form {
+.modal-form-container {
+    margin-bottom: 8px;
 }
+.modal-form {}
 .modal-form-label {
     display: block;
     margin-bottom: 4px;
@@ -873,9 +873,10 @@ margin-bottom: 72px;
 }
 .modal-form-field {
     position: relative;
-    margin-bottom: 8px;
+    /* margin-bottom: 8px; */
 }
-.modal-form-input, .modal-form-comment {
+.modal-form-input, 
+.modal-form-comment {
     width: 100%;
     border-radius: 4px;
     border: 1px solid rgba(46, 47, 66, 0.40);
@@ -885,17 +886,21 @@ margin-bottom: 72px;
     line-height: 1.17;
     letter-spacing: 0.04em;
     height: 40px;
+    background-color: transparent;
 
     transition: border-color var(--transition);
 
 }
-.modal-form-comment {
+.form-comment-container {
     margin-bottom: 16px;
+}
+.modal-form-comment {
+    /* margin-bottom: 16px; */
     height: 120px;
     padding: 8px 16px;
 
     resize: none;
-
+    transition: border-color var(--transition);
 }
 .modal-form-comment::placeholder {
     color: rgba(46, 47, 66, 0.4);
@@ -954,11 +959,14 @@ margin-bottom: 72px;
     opacity: 1;
     transform: scale(1);
 }
-
+.form-agrement-container {
+    margin-bottom: 24px;
+}
 .modal-form-agrement {
     display: block;
     color: var(--light-slate);
     font-size: 12px;
+    line-height: 1.17;
     letter-spacing: 0.04em;
 }
 .agreement-checkbox {
@@ -970,20 +978,22 @@ margin-bottom: 72px;
     height: 16px;
     margin-right: 8px;
 
-    color: transparent;
+    fill: transparent;
 
-    border-radius: 4px;
+    border-radius: 2px;
     border: 1px solid var(--navyblue-modal, rgba(46, 47, 66, 0.40));
 
-    transition: background-color var(--transition), border-color var(--transition), color var(--transition);
+    transition: background-color var(--transition), border var(--transition), fill var(--transition);
 }
-input[type="checkbox"]:checked + .agreement-checkbox {
+/* input[type="checkbox"]:checked + .agreement-checkbox {
     background-color: var(--ocean);
-    border-color: var(--ocean);
-    color: var(--cloud);
-}
-.agrement-checkbox-icon {
-    fill: currentColor;
+    border: var(--ocean);
+    fill: var(--cloud);
+} */
+input:checked+label>span {
+    background-color: var(--ocean);
+    border: none;
+    fill: var(--cloud);
 }
 .modal-form-desc {
     user-select: none;
@@ -994,7 +1004,7 @@ input[type="checkbox"]:checked + .agreement-checkbox {
 .modal-form-btn {
     display: block;
     margin: 0 auto;
-    margin-top: 24px;
+    /* margin-top: 24px; */
     border-radius: 4px;
     background: var(--iris);
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
@@ -1007,7 +1017,9 @@ input[type="checkbox"]:checked + .agreement-checkbox {
     letter-spacing: 0.04em;
     padding: 16px 32px;
     min-width: 169px;
-    min-height: 56px;
+    height: 56px;
+
+    transition: var(--transition);
 }
 .modal-form-btn:hover, .modal-form-btn:focus {
     background: var(--ocean);
