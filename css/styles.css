@@ -947,13 +947,15 @@ header>.container {
     resize: none;
     transition: border-color var(--transition);
 }
-
+.modal-form-comment::placeholder {
+    color: rgba(46, 47, 66, 0.4);
+}
 .modal-form-comment:focus {
     border-color: var(--iris);
 }
 
 .modal-form-input:focus {
-    border-color: var(--iris);
+    border-color: #4D5AE5;
 }
 
 /* Check input state */
