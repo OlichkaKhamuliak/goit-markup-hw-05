@@ -975,7 +975,7 @@ header>.container {
     transition: fill var(--transition);
 }
 
-.modal-form-input:focus + .modal-form-icon {
+.modal-form-input:focus+.modal-form-icon {
     fill: #4D5AE5;
 }
 
