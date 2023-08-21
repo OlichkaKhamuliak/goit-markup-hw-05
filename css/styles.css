@@ -913,7 +913,7 @@ header>.container {
     border-radius: 4px;
     background-color: transparent;    
     padding-left: 38px;    
-    padding: 11px 16px;
+    /* padding: 11px 16px; */
     outline: transparent;
 
     transition: border-color var(--transition);
