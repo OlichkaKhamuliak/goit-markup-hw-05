@@ -909,7 +909,7 @@ header>.container {
 .modal-form-input {
     width: 100%;
     height: 40px;    
-    border: 1px solid rgba(46, 47, 66, 0.4);    
+    border: 1px solid rgba(46, 47, 66, 0.4);
     border-radius: 4px;
     background-color: transparent;    
     padding-left: 38px;    
@@ -917,13 +917,15 @@ header>.container {
     outline: transparent;
 
     transition: border-color var(--transition);
-
 }
 
 .modal-form-input:focus {
     border-color: #4D5AE5;
 }
 
+.modal-form-input:focus+.modal-form-icon {
+    fill: #4D5AE5;
+}
 .form-comment-container {
     margin-bottom: 16px;
 }
@@ -972,10 +974,6 @@ header>.container {
     transform: translateY(-50%);
     pointer-events: none;
     transition: fill var(--transition);
-}
-
-.modal-form-field .modal-form-input:focus+.modal-form-icon {
-    fill: #4D5AE5;
 }
 
 .modal-form-input:not(:placeholder-shown):invalid:required+.modal-form-icon {
