@@ -1035,7 +1035,7 @@ header>.container {
     border-radius: 2px;
     border: 1px solid var(--navyblue-modal, rgba(46, 47, 66, 0.40));
 
-    transition: background-color var(--transition), border-color var(--transition), fill var(--transition);
+    transition: background-color var(--transition), border var(--transition), fill var(--transition);
 }
 
 /* input[type="checkbox"]:checked + .agreement-checkbox {
@@ -1045,8 +1045,16 @@ header>.container {
 } */
 input:checked+label>span {
     background-color: var(--ocean);
-    border-color: var(--ocean);
+    border: none;
     fill: var(--cloud);
+}
+
+/* input[type="checkbox"]:focus+.agreement-checkbox {
+    border-color: var(--ocean);
+} */
+
+input:hover+label>span {
+    border-color: var(--ocean);
 }
 
 .modal-form-desc {
